@@ -3,9 +3,9 @@ import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
 import LockIcon from "@mui/icons-material/Lock";
 import { Formik } from "formik";
-import RegisterForm, { registerSchema } from "../components/RegisterForm";
 import Grid from "@mui/material/Grid";
-import image from "../assets/b.png";
+import RegisterForm, { registerSchema } from "../components/RegisterForm";
+import image from "../assets/blogger.svg";
 import { Link } from "react-router-dom";
 import { Box } from "@mui/material";
 
@@ -13,6 +13,7 @@ import useAuthCall from "../hooks/useAuthCall";
 
 const Register = () => {
   const { register } = useAuthCall();
+  
 
   return (
     <Container maxWidth="lg">
@@ -28,7 +29,7 @@ const Register = () => {
       >
         <Grid item xs={12}>
           <Typography variant="h3" color="primary" align="center">
-            BLOG APP
+            MY BLOG APP
           </Typography>
         </Grid>
 
@@ -68,14 +69,14 @@ const Register = () => {
             }}
             component={(props) => <RegisterForm {...props} />}
           ></Formik>
-          <Box sx={{ textAlign: "center", mt: 2  }}>
+          <Box sx={{ textAlign: "center", mt: 2 }}>
             <Link to="/">Do you have an account?</Link>
           </Box>
         </Grid>
 
-        <Grid item xs={0} sm={7} md={6}>
-          <Container >
-            <img  src={image} alt=""  />
+        <Grid item xs={0} sm={4} md={5} sx={{marginTop:"85px"}}>
+          <Container>
+            <img src={image} alt=""/>
           </Container>
         </Grid>
       </Grid>

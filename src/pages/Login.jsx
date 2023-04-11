@@ -4,11 +4,12 @@ import Container from "@mui/material/Container"
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
 import LockIcon from "@mui/icons-material/Lock"
-import image from "../assets/b.png"
+import image from "../assets/blogger.svg"
 import { Link } from "react-router-dom"
 import { Formik } from "formik"
-import useAuthCall from "../hooks/useAuthCall"
 import LoginForm, { loginScheme } from "../components/LoginForm"
+import useAuthCall from "../hooks/useAuthCall"
+
 
 const Login = () => {
   const { login } = useAuthCall()
@@ -26,7 +27,7 @@ const Login = () => {
       >
         <Grid item xs={12} mb={3}>
           <Typography variant="h3" color="primary" align="center">
-            Blog App
+            MY BLOG APP
           </Typography>
         </Grid>
 
@@ -66,7 +67,7 @@ const Login = () => {
           </Box>
         </Grid>
 
-        <Grid item xs={10} sm={7} md={6}>
+        <Grid item xs={10} sm={7} md={6} sx={{marginTop:"25px"}}>
           <Container>
             <img src={image} alt="img" />
           </Container>
