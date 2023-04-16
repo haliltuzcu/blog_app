@@ -1,6 +1,6 @@
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { createTheme, ThemeProvider } from "@mui/material";
 import AppRouter from "./routes/AppRouter";
-import { grey, blueGrey } from "@mui/material/colors";
+import { blueGrey, grey, green } from "@mui/material/colors";
 import { Provider } from "react-redux";
 import store from "./app/store";
 
@@ -9,21 +9,20 @@ function App() {
   const theme = createTheme({
     palette: {
       primary: {
-        main: grey["400"],
+        main: green["200"],
       },
       secondary: {
         main: blueGrey["900"],
       },
     },
-  });
+  })
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <Provider store={store}>
-          <AppRouter />
-        </Provider>
-      
-      </ThemeProvider>
+    <ThemeProvider theme={theme}>
+      <Provider store={store}>
+        <AppRouter/>
+      </Provider>
+    </ThemeProvider>
     </>
   );
 }

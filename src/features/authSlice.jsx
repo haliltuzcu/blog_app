@@ -17,7 +17,7 @@ const authSlice = createSlice({
     },
     loginSuccess: (state, { payload }) => {
       state.loading = false;
-      state.currentUser = payload?.user?.username;
+      state.currentUser = payload?.user;
       state.isAdmin = payload?.user?.is_superuser;
       state.token = payload?.key;
     },
